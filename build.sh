@@ -19,7 +19,7 @@ platform_arch="$(uname -m)"
                        grep -om1 'coreutils-.*\.tar\.xz'|cut -d'>' -f2|sed 's|coreutils-||g;s|.tar.xz||g')"
 
 [ "$musl_version" == "latest" ] && \
-  musl_version="$(curl -s https://www.musl-libc.org/releases/|tac|grep -v 'latest'|\
+  musl_version="$(curl -s https://musl.libc.org/releases/|tac|grep -v 'latest'|\
                   grep -om1 'musl-.*\.tar\.gz'|cut -d'>' -f2|sed 's|musl-||g;s|.tar.gz||g')"
 
 if [ -d build ]
