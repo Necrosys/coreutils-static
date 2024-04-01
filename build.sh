@@ -2,7 +2,7 @@
 
 export MAKEFLAGS="-j$(nproc)"
 
-# WITH_UPX=1
+WITH_UPX=1
 # NO_SYS_MUSL=1
 
 # coreutils_version="8.28"
